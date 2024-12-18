@@ -35,9 +35,9 @@ def send_email(quote, sender_email, sender_password, recipient_email):
 
 # Main function
 def main():
-    sender_email = "your_email@gmail.com"
-    sender_password = "your_app_password"
-    recipient_email = "recipient_email@example.com"
+    sender_email = os.getenv('SENDER_EMAIL')
+    sender_password = os.getenv('SENDER_PASSWORD')
+    recipient_email = os.getenv('RECIPIENT_EMAIL')
 
     quote = get_motivational_quote()
     send_email(quote, sender_email, sender_password, recipient_email)
