@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests
+        pip install requests==2.31.0  # Specify the latest version
 
     - name: Run script
       env:
